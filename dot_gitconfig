@@ -1,0 +1,102 @@
+# Local/private config goes in the include
+# [include]
+	# path = ~/.gitconfig.local
+
+[hub]
+	protocol = https
+
+[alias]
+	co = checkout
+	# promote = !$ZSH/bin/git-promote
+	# wtf     = !$ZSH/bin/git-wtf
+	# rank-contributors = !$ZSH/bin/git-rank-contributors
+	count   = !git shortlog -sn
+	slog    = !git log -n10
+	ci = commit
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = true
+
+[core]
+	excludesfile = ~/.gitignore
+	editor = vim
+	autocrlf = input
+
+[apply]
+	whitespace = nowarn
+
+[mergetool]
+	keepBackup = false
+
+[difftool]
+	prompt = false
+
+[help]
+	autocorrect = 1
+
+[push]
+	# See `git help config` (search for push.default)
+	# for more information on different options of the below setting.
+	#
+	# Setting to git 2.0 default to suppress warning message
+	default = current
+
+[branch]
+	autosetupmerge = always
+
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+
+[user]
+	name = Cameron Booth
+	email = cdb@github.com
+
+[github]
+	user = cdb
+
+[pull]
+	rebase = true
+
+[format]
+	#pretty = %Cblue%h%Creset %Cgreen[%ci]%Creset (%an) %s
+	#pretty = oneline
+	pretty = %Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cs) %C(bold blue)<%an>%Creset
+
+[rebase]
+	autoStash = true
+
+[credential]
+	helper = osxkeychain
+
+#[url "git@github.com:"]
+#	insteadOf = https://github.com/
+
+[pager]
+	# https://remysharp.com/2018/08/23/cli-improved
+	diff = diff-so-fancy | less --tabs=1,5 -RFX
+	show = diff-so-fancy | less --tabs=1,5 -RFX
+
+[color "diff-highlight"]
+	# https://github.com/so-fancy/diff-so-fancy
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+
+[color "diff"]
+	# https://github.com/so-fancy/diff-so-fancy
+	meta = 11
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+
+[gc]
+	auto = 6700
