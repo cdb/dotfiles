@@ -1,0 +1,80 @@
+{{- if (eq .chezmoi.os "darwin") -}}
+#!/bin/bash
+
+brew bundle --no-lock --file=/dev/stdin <<EOF
+
+cask_args appdir: "/Applications"
+
+tap "homebrew/cask"
+tap "homebrew/bundle"
+tap "homebrew/services"
+tap "homebrew/cask-drivers" ## For logitech-options
+tap "heroku/brew"
+tap "github/gh"
+tap "homebrew/cask-fonts"
+
+brew "ack"
+brew "asdf"
+brew "autojump"
+brew "azure-cli"
+brew "bat"
+brew "clang-format"
+brew "consul"
+brew "coreutils"
+brew "diff-so-fancy"
+brew "entr"
+brew "exercism"
+brew "gcc"
+brew "git"
+brew "git-lfs"
+brew "gh"
+brew "go"
+brew "golang-migrate"
+brew "htop"
+brew "hub"
+brew "heroku"
+brew "jq"
+brew "mkcert"
+brew "nmap"
+# brew "nomad"
+brew "prettyping"
+brew "python"
+brew "postgresql"
+brew "ruby-build"
+brew "rustup"
+brew "rbenv"
+brew "the_silver_searcher"
+# brew "terraform"
+brew "tldr"
+brew "tree"
+brew "vault"
+brew "watch"
+# brew "zsh"
+# brew "zsh-completions"
+
+cask "docker"
+# cask 'keybase'
+# cask 'google-chrome'
+cask "rowanj-gitx"
+cask "slack"
+cask "visual-studio-code"
+cask "iterm2"
+cask "alfred"
+cask "mailplane"
+cask "sizeup"
+cask "dropbox"
+cask "fantastical"
+cask "vlc"
+cask "spotify"
+cask "graphiql"
+cask "firefox"
+cask "ngrok"
+cask "logitech-options"
+cask "karabiner-elements"
+cask "moom"
+cask "clocker"
+cask "font-fira-code-nerd-font"
+
+EOF
+
+{{ end -}}
