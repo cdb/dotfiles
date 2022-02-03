@@ -5,6 +5,9 @@
 [hub]
 	protocol = https
 
+[init]
+	defaultBranch = main
+
 [alias]
 	co = checkout
 	# promote = !$ZSH/bin/git-promote
