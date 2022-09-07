@@ -1,1 +1,5 @@
+{{ if (eq .chezmoi.os "darwin") -}}
 machine goproxy.githubapp.com login nobody password {{ keyring "github" "cdb" }}
+{{- else -}}
+machine goproxy.githubapp.com login nobody password {{ env "GITHUB_TOKEN" }}
+{{- end }}
