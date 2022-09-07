@@ -80,10 +80,12 @@
 #[url "git@github.com:"]
 #	insteadOf = https://github.com/
 
+{{- if (eq .chezmoi.os "darwin") -}}
 [pager]
 	# https://remysharp.com/2018/08/23/cli-improved
 	diff = diff-so-fancy | less --tabs=1,5 -RFX
 	show = diff-so-fancy | less --tabs=1,5 -RFX
+{{- end -}}
 
 [color "diff-highlight"]
 	# https://github.com/so-fancy/diff-so-fancy
