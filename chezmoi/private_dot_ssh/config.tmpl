@@ -1,0 +1,54 @@
+Host shell
+    HostName shell.service.ac4-iad.github.net
+    ForwardAgent yes
+    ProxyJump bastion.githubapp.com
+    User cdb
+
+Host bastion.githubapp.com
+    User cdb
+
+Host *.github.net
+    User cdb
+
+Host github-codespaces
+    User root
+    HostName localhost
+    Port 2222
+    NoHostAuthenticationForLocalhost yes
+    ForwardAgent yes
+    AddKeysToAgent yes
+
+Host bpdev-ghe-march
+    User build
+    HostName cdb-r8lcw9qug.service.bpdev-us-east-1.github.net
+    IdentityFile ~/.ssh/id_rsa
+    ForwardAgent yes
+    DynamicForward 9999
+
+Host bpdev-ghe-march2
+    User build
+    HostName cdb-r8lv2hbr9.service.bpdev-us-east-1.github.net
+    IdentityFile ~/.ssh/id_rsa
+    ForwardAgent yes
+    DynamicForward 9999
+
+Host bpdev-ghe-march3
+    User build
+    HostName cdb-r9j19qh3m.service.bpdev-us-east-1.github.net
+    IdentityFile ~/.ssh/id_rsa
+    ForwardAgent yes
+    DynamicForward 9999
+
+
+Host gheboot
+    User admin
+    HostName cdb-0cb67bd49b1e7e214.ghe-test.ninja
+    IdentityFile ~/.ssh/id_rsa
+    ForwardAgent yes
+    Port 122
+
+
+Host github.com-test-user2
+   HostName github.com
+   User git
+   IdentityFile ~/.ssh/id_rsa_cameronbooth_test2_gmail
