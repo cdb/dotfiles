@@ -1,1 +1,3 @@
+{{ if (eq .chezmoi.os "darwin") -}}
 {{ ( index (lastpass "ssh key") 0).note.testUserPrivate }}
+{{- end }}
