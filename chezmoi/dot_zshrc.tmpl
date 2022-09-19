@@ -108,4 +108,10 @@ export NVM_DIR="$HOME/.nvm"
 
 # From installing rustup:
 . "$HOME/.cargo/env"
+
+# From installing llvm to get deno running in rust on mac:
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
+
 {{- end }}
