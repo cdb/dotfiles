@@ -100,6 +100,15 @@ setopt glob_dots     # no special treatment for file names with a leading dot
 setopt no_auto_menu  # require an extra TAB press to open the completion menu
 
 
+if [ $CODESPACES ]; then
+    export GOPROXY=https://goproxy.githubapp.com/mod,https://proxy.golang.org/,direct
+    export GOPRIVATE=
+    export GONOPROXY=
+    export GONOSUMDB='github.com/github/*'
+    alias start-actions='/workspaces/github/script/actions/start-actions'
+    alias stop-actions='/workspaces/github/script/actions/stop-actions'
+fi
+
 {{ if (eq .chezmoi.os "darwin") -}}
 # From installing nvm:
 export NVM_DIR="$HOME/.nvm"
