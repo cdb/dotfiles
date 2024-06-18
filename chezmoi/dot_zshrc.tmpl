@@ -91,6 +91,7 @@ compdef _directories md
 
 # Define aliases.
 alias tree='tree -a -I .git'
+alias code='code-insiders'
 
 # Add flags to existing aliases.
 alias ls="${aliases[ls]:-ls} -A"
@@ -131,4 +132,12 @@ export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
 
+# Get go bin running
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export PATH=$GOBIN:$PATH
+
+# Get rbenv running
+eval "$(rbenv init - zsh)"
 {{- end }}
+
