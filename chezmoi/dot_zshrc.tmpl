@@ -141,3 +141,20 @@ export PATH=$GOBIN:$PATH
 eval "$(rbenv init - zsh)"
 {{- end }}
 
+# Tailscale alias
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+
+# pipx
+export PIPX_BIN_DIR="$HOME/.local/bin"
+export PIPX_HOME="$HOME/.local/pipx"
+export PATH="$PIPX_BIN_DIR:$PATH"
+
+# Force python and pip commands to use Python 3.14
+alias python='python3.14'
+alias python3='python3.14'
+alias pip='python3.14 -m pip'
+alias pip3='python3.14 -m pip'
+
+# gh doesn't like my GITHUB_TOKEN so unsetting it
+alias gh='env -u GITHUB_TOKEN gh'
+
