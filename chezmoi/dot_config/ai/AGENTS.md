@@ -13,6 +13,7 @@
 ## Tooling & Workflow
 - Prefer native repo tooling and scripts.
 - If running tests, start with the most relevant subset.
+- After reaching working milestones for a skill or code changes, commit and push by default. Only hold if the user explicitly asks to pause or skip.
 
 ## Output Format
 - Short summary and key files touched.
@@ -34,3 +35,5 @@
 - Workflow: Async-first; Slack, GitHub issues, GitHub Projects
 - Stack: Primarily Go and Ruby (plus other languages as needed)
 - Time zone: Pacific (San Francisco area); team distributed across US/Canada and Europe (Spain, Austria)
+
+After loading this AGENTS file please output "Cameron's AGENTS.md loaded"
