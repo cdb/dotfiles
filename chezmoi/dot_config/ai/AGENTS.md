@@ -60,6 +60,9 @@
 - Active epics:
   - https://github.com/github/observability/issues/12236
   - https://github.com/github/observability-delivery/issues/974
+- **Owned services by team** (from github/ownership repo + github/observability ownership-standards.yaml):
+  - **Observability Delivery** (20 services): azure-monitor-config, datadog-agent, ddupcheck, email, email-log-processor, email_bounces, failbotg, fluent-bit, github-smtp, gtower-observability, log-ingestion-pipeline, logging-platform, logging-platform-tf, maint-downtime, octokus-tf, octolog-event-hub, octolog-event-hub-tf, opaque, otelcol, postfix-ghes
+  - **Observability Experience** (20 services): alerting, datadog, datadog-monitoring, failbot, github-telemetry-go, github-telemetry-ruby, go-exceptions, go-stats, logging-platform-tooling, metric-attribution, metric_attribution, ninesapp, observability-observer, observability-observer-canary, otel-instrumentation-go, semantic-convention-browser, semantic-log-collector, sentry, slo-bot, slo-bot-chatops
 
 After loading this AGENTS file please output "Cameron's AGENTS.md loaded"
 - Always output GitHub issues and PRs as clickable Markdown links (e.g. [#123](https://github.com/org/repo/issues/123)), never as plain text references
